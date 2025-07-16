@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Abarrotería</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #f8c471, #f5b041);
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      background-color: #d35400;
+      color: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .producto {
+      background-color: #fff3e0;
+      border: 2px solid #e67e22;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem;
+      width: 220px;
+      text-align: center;
+      display: inline-block;
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+    }
+    button {
+      background-color: #e67e22;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ca6f1e;
+    }
+    input[type="number"] {
+      width: 60px;
+      margin: 0.5rem 0;
+    }
+    #carrito {
+      background-color: #fbe9e7;
+      padding: 1rem;
+      margin: 2rem;
+      border-radius: 8px;
+      border: 2px solid #d35400;
+    }
+  </style>
+</head>
+<body>
+  <h1>Abarrotería "La Económica"</h1>
+  
+<div class="producto">
+  <img src="imagenes/lomo-cerdo.jpg" alt="Lomo de cerdo 1lb">
+  <h3>Lomo de cerdo 1lb</h3>
+  <p>Lps 100</p>
+  <input type="number" id="cantidad-lomo-cerdo" min="1" value="1">
+  <button onclick="agregarAlCarrito('Lomo de cerdo 1lb', 'cantidad-lomo-cerdo')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/galletas-crema.jpg" alt="Galletas crema (paquete)">
+  <h3>Galletas crema (paquete)</h3>
+  <p>Lps 24</p>
+  <input type="number" id="cantidad-galletas-crema" min="1" value="1">
+  <button onclick="agregarAlCarrito('Galletas crema (paquete)', 'cantidad-galletas-crema')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/galleta-salada.jpg" alt="Galleta salada (paquete)">
+  <h3>Galleta salada (paquete)</h3>
+  <p>Lps 28</p>
+  <input type="number" id="cantidad-galleta-salada" min="1" value="1">
+  <button onclick="agregarAlCarrito('Galleta salada (paquete)', 'cantidad-galleta-salada')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/galleta-escolar.jpg" alt="Galleta escolar (paquete)">
+  <h3>Galleta escolar (paquete)</h3>
+  <p>Lps 23</p>
+  <input type="number" id="cantidad-galleta-escolar" min="1" value="1">
+  <button onclick="agregarAlCarrito('Galleta escolar (paquete)', 'cantidad-galleta-escolar')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/chorizo-cervecero.jpg" alt="Chorizo cervecero (paquete)">
+  <h3>Chorizo cervecero (paquete)</h3>
+  <p>Lps 130</p>
+  <input type="number" id="cantidad-chorizo-cervecero" min="1" value="1">
+  <button onclick="agregarAlCarrito('Chorizo cervecero (paquete)', 'cantidad-chorizo-cervecero')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/chorizo-zambrano.jpg" alt="Chorizo Zambrano (paquete)">
+  <h3>Chorizo Zambrano (paquete)</h3>
+  <p>Lps 120</p>
+  <input type="number" id="cantidad-chorizo-zambrano" min="1" value="1">
+  <button onclick="agregarAlCarrito('Chorizo Zambrano (paquete)', 'cantidad-chorizo-zambrano')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/aceite-oliva.jpg" alt="Aceite de oliva 500ml">
+  <h3>Aceite de oliva 500ml</h3>
+  <p>Lps 58</p>
+  <input type="number" id="cantidad-aceite-oliva" min="1" value="1">
+  <button onclick="agregarAlCarrito('Aceite de oliva 500ml', 'cantidad-aceite-oliva')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/coca-3l.jpg" alt="Coca-Cola 3L">
+  <h3>Coca-Cola 3L</h3>
+  <p>Lps 70</p>
+  <input type="number" id="cantidad-coca-3l" min="1" value="1">
+  <button onclick="agregarAlCarrito('Coca-Cola 3L', 'cantidad-coca-3l')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/coca-2.5l.jpg" alt="Coca-Cola 2.5L">
+  <h3>Coca-Cola 2.5L</h3>
+  <p>Lps 60</p>
+  <input type="number" id="cantidad-coca-2" min="1" value="1">
+  <button onclick="agregarAlCarrito('Coca-Cola 2.5L', 'cantidad-coca-2')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/coca-2l.jpg" alt="Coca-Cola 2L">
+  <h3>Coca-Cola 2L</h3>
+  <p>Lps 52</p>
+  <input type="number" id="cantidad-coca-2l" min="1" value="1">
+  <button onclick="agregarAlCarrito('Coca-Cola 2L', 'cantidad-coca-2l')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/coca-1.5l.jpg" alt="Coca-Cola 1.5L">
+  <h3>Coca-Cola 1.5L</h3>
+  <p>Lps 40</p>
+  <input type="number" id="cantidad-coca-1" min="1" value="1">
+  <button onclick="agregarAlCarrito('Coca-Cola 1.5L', 'cantidad-coca-1')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/coca-1l-vidrio.jpg" alt="Coca-Cola vidrio 1L">
+  <h3>Coca-Cola vidrio 1L</h3>
+  <p>Lps 28</p>
+  <input type="number" id="cantidad-coca-1l-vidrio" min="1" value="1">
+  <button onclick="agregarAlCarrito('Coca-Cola vidrio 1L', 'cantidad-coca-1l-vidrio')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/coca-portatil.jpg" alt="Coca-Cola portátil">
+  <h3>Coca-Cola portátil</h3>
+  <p>Lps 25</p>
+  <input type="number" id="cantidad-coca-portatil" min="1" value="1">
+  <button onclick="agregarAlCarrito('Coca-Cola portátil', 'cantidad-coca-portatil')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/yogurt.jpg" alt="Yogurt 1 unidad">
+  <h3>Yogurt 1 unidad</h3>
+  <p>Lps 22</p>
+  <input type="number" id="cantidad-yogurt" min="1" value="1">
+  <button onclick="agregarAlCarrito('Yogurt 1 unidad', 'cantidad-yogurt')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/mantequilla-sula.jpg" alt="Mantequilla Sula">
+  <h3>Mantequilla Sula</h3>
+  <p>Lps 13</p>
+  <input type="number" id="cantidad-mantequilla-sula" min="1" value="1">
+  <button onclick="agregarAlCarrito('Mantequilla Sula', 'cantidad-mantequilla-sula')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/mantequilla-pradera.jpg" alt="Mantequilla La Pradera">
+  <h3>Mantequilla La Pradera</h3>
+  <p>Lps 20</p>
+  <input type="number" id="cantidad-mantequilla-pradera" min="1" value="1">
+  <button onclick="agregarAlCarrito('Mantequilla La Pradera', 'cantidad-mantequilla-pradera')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/mantequilla-pesada.jpg" alt="Mantequilla Pesada 1lb">
+  <h3>Mantequilla Pesada 1lb</h3>
+  <p>Lps 25</p>
+  <input type="number" id="cantidad-mantequilla-pesada" min="1" value="1">
+  <button onclick="agregarAlCarrito('Mantequilla Pesada 1lb', 'cantidad-mantequilla-pesada')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/costilla-cerdo.jpg" alt="Costilla de cerdo 1lb">
+  <h3>Costilla de cerdo 1lb</h3>
+  <p>Lps 50</p>
+  <input type="number" id="cantidad-costilla-cerdo" min="1" value="1">
+  <button onclick="agregarAlCarrito('Costilla de cerdo 1lb', 'cantidad-costilla-cerdo')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/chuleta-cerdo.jpg" alt="Chuleta de cerdo 1lb">
+  <h3>Chuleta de cerdo 1lb</h3>
+  <p>Lps 52</p>
+  <input type="number" id="cantidad-chuleta-cerdo" min="1" value="1">
+  <button onclick="agregarAlCarrito('Chuleta de cerdo 1lb', 'cantidad-chuleta-cerdo')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/cerveza-salvavidas.jpg" alt="Cerveza Salvavidas">
+  <h3>Cerveza Salvavidas</h3>
+  <p>Lps 22</p>
+  <input type="number" id="cantidad-cerveza-salvavidas" min="1" value="1">
+  <button onclick="agregarAlCarrito('Cerveza Salvavidas', 'cantidad-cerveza-salvavidas')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/cerveza-barena.jpg" alt="Cerveza Barena">
+  <h3>Cerveza Barena</h3>
+  <p>Lps 25</p>
+  <input type="number" id="cantidad-cerveza-barena" min="1" value="1">
+  <button onclick="agregarAlCarrito('Cerveza Barena', 'cantidad-cerveza-barena')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/cerveza-ultra.jpg" alt="Cerveza Ultra">
+  <h3>Cerveza Ultra</h3>
+  <p>Lps 32</p>
+  <input type="number" id="cantidad-cerveza-ultra" min="1" value="1">
+  <button onclick="agregarAlCarrito('Cerveza Ultra', 'cantidad-cerveza-ultra')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/maseca-costal.jpg" alt="Costal de maseca">
+  <h3>Costal de maseca</h3>
+  <p>Lps 255</p>
+  <input type="number" id="cantidad-maseca-costal" min="1" value="1">
+  <button onclick="agregarAlCarrito('Costal de maseca', 'cantidad-maseca-costal')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/arroz-costal.jpg" alt="Costal de arroz">
+  <h3>Costal de arroz</h3>
+  <p>Lps 300</p>
+  <input type="number" id="cantidad-arroz-costal" min="1" value="1">
+  <button onclick="agregarAlCarrito('Costal de arroz', 'cantidad-arroz-costal')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/frijoles-costal.jpg" alt="Costal de frijoles">
+  <h3>Costal de frijoles</h3>
+  <p>Lps 300</p>
+  <input type="number" id="cantidad-frijoles-costal" min="1" value="1">
+  <button onclick="agregarAlCarrito('Costal de frijoles', 'cantidad-frijoles-costal')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/frijoles-libra.jpg" alt="Libra de frijoles">
+  <h3>Libra de frijoles</h3>
+  <p>Lps 25</p>
+  <input type="number" id="cantidad-frijoles-libra" min="1" value="1">
+  <button onclick="agregarAlCarrito('Libra de frijoles', 'cantidad-frijoles-libra')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/arroz-libra.jpg" alt="Libra de arroz">
+  <h3>Libra de arroz</h3>
+  <p>Lps 15</p>
+  <input type="number" id="cantidad-arroz-libra" min="1" value="1">
+  <button onclick="agregarAlCarrito('Libra de arroz', 'cantidad-arroz-libra')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/maseca-libra.jpg" alt="Maseca por libra">
+  <h3>Maseca por libra</h3>
+  <p>Lps 15</p>
+  <input type="number" id="cantidad-maseca-libra" min="1" value="1">
+  <button onclick="agregarAlCarrito('Maseca por libra', 'cantidad-maseca-libra')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/harina-gold-star.jpg" alt="Harina Gold Star 1lb">
+  <h3>Harina Gold Star 1lb</h3>
+  <p>Lps 17</p>
+  <input type="number" id="cantidad-harina-gold-star" min="1" value="1">
+  <button onclick="agregarAlCarrito('Harina Gold Star 1lb', 'cantidad-harina-gold-star')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/azucar-libra.jpg" alt="Libra de azúcar">
+  <h3>Libra de azúcar</h3>
+  <p>Lps 25</p>
+  <input type="number" id="cantidad-azucar-libra" min="1" value="1">
+  <button onclick="agregarAlCarrito('Libra de azúcar', 'cantidad-azucar-libra')">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="imagenes/cafe.jpg" alt="Café 1lb">
+  <h3>Café 1lb</h3>
+  <p>Lps 75</p>
+  <input type="number" id="cantidad-cafe" min="1" value="1">
+  <button onclick="agregarAlCarrito('Café 1lb', 'cantidad-cafe')">Agregar al carrito</button>
+</div>
+
+  <div id="carrito">
+    <h2>Carrito de compras</h2>
+    <ul id="carrito-lista"></ul>
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+  <script>
+    let carrito = [];
+    function agregarAlCarrito(nombre, id) {
+      const cantidad = parseInt(document.getElementById(id).value);
+      if (cantidad > 0) {
+        carrito.push({ nombre, cantidad });
+        actualizarCarrito();
+      } else {
+        alert("Por favor, ingresa una cantidad válida.");
+      }
+    }
+    function actualizarCarrito() {
+      const lista = document.getElementById("carrito-lista");
+      lista.innerHTML = "";
+      carrito.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nombre} x ${item.cantidad}`;
+        lista.appendChild(li);
+      });
+    }
+    function comprar() {
+      if (carrito.length === 0) {
+        alert("El carrito está vacío.");
+        return;
+      }
+      let mensaje = "Hola, quiero realizar un pedido:\n";
+      carrito.forEach(item => {
+        mensaje += `- ${item.nombre} x ${item.cantidad}\n`;
+      });
+      const numero = "50487522475";
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, "_blank");
+      carrito = [];
+      actualizarCarrito();
+    }
+  </script>
+</body>
+</html>
